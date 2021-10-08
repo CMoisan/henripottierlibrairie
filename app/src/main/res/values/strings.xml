@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">Henri Pottier</string>
+    <string name="networkError">Could not retrieve books</string>
+    <string name="bookCover">Book cover</string>
+</resources>

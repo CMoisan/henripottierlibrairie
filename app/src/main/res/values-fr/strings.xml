@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="networkError">Erreur de récupération des livres</string>
+    <string name="bookCover">Couverture du livre</string>
+</resources>
