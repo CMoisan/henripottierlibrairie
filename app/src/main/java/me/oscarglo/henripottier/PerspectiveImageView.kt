@@ -6,7 +6,7 @@ import android.util.AttributeSet
 
 class PerspectiveImageView(ctx: Context, attrs: AttributeSet): androidx.appcompat.widget.AppCompatImageView(ctx, attrs) {
     // Get perspective attribute
-    val perspective: Float = context.obtainStyledAttributes(attrs, intArrayOf(R.attr.perspective)).getFloat(0, 10f)
+    private val perspective: Float = context.obtainStyledAttributes(attrs, intArrayOf(R.attr.perspective)).getFloat(0, 10f)
 
     override fun onDraw(canvas: Canvas?) {
         if (drawable != null) {

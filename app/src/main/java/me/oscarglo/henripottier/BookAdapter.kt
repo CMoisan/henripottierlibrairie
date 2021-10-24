@@ -3,14 +3,17 @@ package me.oscarglo.henripottier
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.squareup.picasso.Picasso
 
-class BookAdapter(private val books: List<Book>): Adapter<BookAdapter.BookPreview>() {
+class BookAdapter : Adapter<BookAdapter.BookPreview>() {
+    var books: List<Book> = listOf()
+
     class BookPreview(view: View) : RecyclerView.ViewHolder(view) {
-        val image: PerspectiveImageView = view.findViewById(R.id.bookPreviewImg)
+        val image: ImageView = view.findViewById(R.id.bookPreviewImg)
         val title: TextView = view.findViewById(R.id.bookPreviewTitle)
     }
 
