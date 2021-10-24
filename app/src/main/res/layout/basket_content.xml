@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/booksView"
-        android:layout_width="409dp"
-        android:layout_height="655dp"
-        android:padding="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartIcon" />
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/cartIcon"
+        android:id="@+id/cartIcon3"
         android:layout_width="75dp"
         android:layout_height="75dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/shopping_cart_foreground" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CartRecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="654dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartIcon3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
