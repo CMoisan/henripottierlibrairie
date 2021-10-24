@@ -1,19 +1,16 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import com.squareup.picasso.Picasso
-import java.net.URI
 
 class DetailsActivity : AppCompatActivity() {
 
-    private var current : Book? = null
+    private var current: Book? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -27,11 +24,11 @@ class DetailsActivity : AppCompatActivity() {
 
 
         val bookTitle = findViewById<TextView>(R.id.bookTitle).apply {
-                text = current?.title
+            text = current?.title
 
         }
         val bookPrice = findViewById<TextView>(R.id.bookPrice).apply {
-                text = current?.price.toString()
+            text = current?.price.toString()
         }
         val bookSynopsis = findViewById<TextView>(R.id.bookSynopsis).apply {
             text = current?.synopsis?.joinToString()
@@ -43,14 +40,13 @@ class DetailsActivity : AppCompatActivity() {
             Picasso.get().load(current?.cover).into(this)
         }
 
-        val buyButton = findViewById(R.id.buyButton) as Button
+        val buyButton = findViewById<Button>(R.id.buyButton)
         buyButton.setOnClickListener {
             onBuyClick()
         }
     }
 
-    fun onBuyClick()
-    {
+    fun onBuyClick() {
         Log.d("TAG", "Test PANIER 1 " + MainActivity.shopping_cart.size)
         current?.let { MainActivity.shopping_cart.add(it) }
         Log.d("TAG", "Test PANIER 2 " + MainActivity.shopping_cart.size)

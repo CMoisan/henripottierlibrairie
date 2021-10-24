@@ -1,4 +1,4 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
 import retrofit2.Call
 import retrofit2.http.GET

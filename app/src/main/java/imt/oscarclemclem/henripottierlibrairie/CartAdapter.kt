@@ -1,4 +1,4 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CartAdapter(private val books: List<Book>): RecyclerView.Adapter<CartAdapter.CartPreview>() {
+class CartAdapter(private val books: List<Book>) : RecyclerView.Adapter<CartAdapter.CartPreview>() {
     class CartPreview(view: View) : RecyclerView.ViewHolder(view) {
         val titre: TextView = view.findViewById(R.id.bookTitre)
         val price: TextView = view.findViewById(R.id.bookPrice)

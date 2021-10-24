@@ -1,4 +1,4 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
 import android.content.Context
 import android.view.GestureDetector
@@ -6,7 +6,8 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerListener(context: Context, private val mListener: OnItemClickListener?) : RecyclerView.OnItemTouchListener {
+class RecyclerListener(context: Context, private val mListener: OnItemClickListener?) :
+    RecyclerView.OnItemTouchListener {
 
     internal var mGestureDetector: GestureDetector
 
@@ -15,11 +16,12 @@ class RecyclerListener(context: Context, private val mListener: OnItemClickListe
     }
 
     init {
-        mGestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
-            override fun onSingleTapUp(e: MotionEvent): Boolean {
-                return true
-            }
-        })
+        mGestureDetector =
+            GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
+                override fun onSingleTapUp(e: MotionEvent): Boolean {
+                    return true
+                }
+            })
     }
 
     override fun onInterceptTouchEvent(view: RecyclerView, e: MotionEvent): Boolean {

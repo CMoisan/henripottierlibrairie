@@ -1,4 +1,4 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.squareup.picasso.Picasso
 
-class BookAdapter(private val books: List<Book>): Adapter<BookAdapter.BookPreview>() {
+class BookAdapter(private val books: List<Book>) : Adapter<BookAdapter.BookPreview>() {
     class BookPreview(view: View) : RecyclerView.ViewHolder(view) {
         val couv: AppCompatImageView = view.findViewById(R.id.bookImg)
         val titre: TextView = view.findViewById(R.id.bookTitle)

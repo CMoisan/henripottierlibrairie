@@ -1,4 +1,4 @@
-package com.example.henripottierlibrairie
+package imt.oscarclemclem.henripottierlibrairie
 
 import org.junit.Test
 
